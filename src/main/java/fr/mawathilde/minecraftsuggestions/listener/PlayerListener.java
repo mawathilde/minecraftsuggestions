@@ -5,6 +5,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.event.entity.player.BonemealEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -25,6 +26,7 @@ public class PlayerListener {
                     event.getWorld().addParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX() + 0.5 + x, pos.getY() + 1.2, pos.getZ() + 0.5 + z, 0, 0, 0);
                 }
             }
+            event.setResult(Event.Result.ALLOW);
         }
     }
 
