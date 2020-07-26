@@ -12,9 +12,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.1'
-group = 'fr.fr.mawathilde.fr.mawathilde.minecraftsuggestions'
-archivesBaseName = 'fr.mawathilde.minecraftsuggestions'
+version = '1.16.1-0.1.0'
+group = 'fr.mawathilde.minecraftsuggestions'
+archivesBaseName = 'minecraftsuggestions'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
@@ -81,13 +81,13 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "fr.mawathilde.minecraftsuggestions",
-            "Specification-Vendor": "fr.mawathilde",
-            "Specification-Version": "1",
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" : "fr.mawathilde.minecraftsuggestions",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title"     : "minecraftsuggestions",
+                "Specification-Vendor"    : "mawathilde",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "minecraftsuggestions",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
