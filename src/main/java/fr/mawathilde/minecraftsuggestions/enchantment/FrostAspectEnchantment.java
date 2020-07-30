@@ -22,17 +22,19 @@ public class FrostAspectEnchantment extends Enchantment {
         }
     }
 
+    @Override
     public int getMinEnchantability(int enchantmentLevel) {
         return 10 + 20 * (enchantmentLevel - 1);
     }
 
+    @Override
     public int getMaxEnchantability(int enchantmentLevel) {
         return super.getMinEnchantability(enchantmentLevel) + 50;
     }
 
     @Override
     public int getMaxLevel() {
-        return 3;
+        return 2;
     }
 
 }

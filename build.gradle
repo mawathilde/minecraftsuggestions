@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.1-0.2.0'
+version = '1.16.1-0.3.0'
 group = 'fr.mawathilde.minecraftsuggestions'
 archivesBaseName = 'minecraftsuggestions'
 
@@ -75,7 +75,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.1-32.0.75'
+    minecraft 'net.minecraftforge:forge:1.16.1-32.0.98'
 }
 
 jar {

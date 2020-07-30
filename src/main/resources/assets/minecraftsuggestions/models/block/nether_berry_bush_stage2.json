@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "minecraftsuggestions:block/nether_berry_bush_stage2"
+  }
+}
