@@ -3,13 +3,14 @@ package fr.mawathilde.minecraftsuggestions.init;
 import fr.mawathilde.minecraftsuggestions.MinecraftSuggestions;
 import fr.mawathilde.minecraftsuggestions.enchantment.FrostAspectEnchantment;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.ObjectHolder;
 
+@ObjectHolder(MinecraftSuggestions.MOD_ID)
 public final class EnchantmentInit {
 
-    public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(Enchantment.class, MinecraftSuggestions.MOD_ID);
-
-    public static final RegistryObject<FrostAspectEnchantment> FROST_ASPECT = ENCHANTMENTS.register("frost_aspect", FrostAspectEnchantment::new);
+    public static void register(IForgeRegistry<Enchantment> registry) {
+        registry.register(new FrostAspectEnchantment().setRegistryName("frost_aspect"));
+    }
 
 }

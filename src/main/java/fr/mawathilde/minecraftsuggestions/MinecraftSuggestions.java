@@ -1,9 +1,7 @@
 package fr.mawathilde.minecraftsuggestions;
 
-import fr.mawathilde.minecraftsuggestions.init.BlockInit;
-import fr.mawathilde.minecraftsuggestions.init.EnchantmentInit;
-import fr.mawathilde.minecraftsuggestions.init.ItemInit;
 import fr.mawathilde.minecraftsuggestions.listener.PlayerListener;
+import fr.mawathilde.minecraftsuggestions.util.handler.RegistryHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -22,9 +20,7 @@ public class MinecraftSuggestions {
 
     public MinecraftSuggestions() {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        BlockInit.BLOCKS.register(eventBus);
-        ItemInit.ITEMS.register(eventBus);
-        EnchantmentInit.ENCHANTMENTS.register(eventBus);
+        eventBus.register(new RegistryHandler());
         MinecraftForge.EVENT_BUS.register(new PlayerListener());
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::commonSetup);

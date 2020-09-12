@@ -2,10 +2,14 @@ package fr.mawathilde.minecraftsuggestions.init;
 
 import fr.mawathilde.minecraftsuggestions.MinecraftSuggestions;
 import net.minecraft.item.Item;
-import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.ObjectHolder;
 
-public class ItemInit {
+@ObjectHolder(MinecraftSuggestions.MOD_ID)
+public final class ItemInit {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Item.class, MinecraftSuggestions.MOD_ID);
+    public static void register(IForgeRegistry<Item> registry) {
+
+    }
 
 }
