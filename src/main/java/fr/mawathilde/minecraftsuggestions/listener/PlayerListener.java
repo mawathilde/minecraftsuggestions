@@ -20,10 +20,10 @@ public class PlayerListener {
             final BlockPos pos = event.getPos();
             event.getWorld().getBiome(pos);
             event.getWorld().setBlockState(pos, Blocks.GRASS_BLOCK.getDefaultState());
-            for (float x = -0.52f; x <= 0.52f; x += random.nextFloat()) {
-                for (float z = -0.52f; z <= 0.52f; z += random.nextFloat()) {
-                    event.getWorld().addParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX() + 0.5 + x, pos.getY() + 1.2, pos.getZ() + 0.5 + z, 0, 0, 0);
-                }
+            for (int i = 0; i < 8; i++) {
+                final float x = random.nextFloat() - 0.5f;
+                final float z = random.nextFloat() - 0.5f;
+                event.getWorld().addParticle(ParticleTypes.HAPPY_VILLAGER, pos.getX() + 0.5 + x, pos.getY() + 1.2, pos.getZ() + 0.5 + z, 0, 0, 0);
             }
             event.setResult(Event.Result.ALLOW);
         }
