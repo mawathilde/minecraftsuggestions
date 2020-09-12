@@ -1,5 +1,6 @@
 modLoader = "javafml" #mandatory
 loaderVersion = "[32,)" #mandatory
+license = "MIT"
 #issueTrackerURL="http://my.issue.tracker/" #optional
 [[mods]] #mandatory
 modId = "minecraftsuggestions" #mandatory
@@ -17,12 +18,12 @@ description = '''
 [[dependencies.minecraftsuggestions]] #optional
 modId = "forge" #mandatory
 mandatory = true #mandatory
-versionRange = "[32,)" #mandatory
+versionRange = "[34,)" #mandatory
 ordering = "NONE"
 side = "BOTH"
 [[dependencies.minecraftsuggestions]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.16.1]"
+versionRange = "[1.16.3]"
 ordering = "NONE"
 side = "BOTH"
