@@ -1,4 +1,4 @@
-package fr.mawathilde.minecraftsuggestions.enchantment;
+package fr.mawathilde.minecraftsuggestions.common.enchantment;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;

@@ -1,7 +1,7 @@
 package fr.mawathilde.minecraftsuggestions.init;
 
 import fr.mawathilde.minecraftsuggestions.MinecraftSuggestions;
-import fr.mawathilde.minecraftsuggestions.enchantment.FrostAspectEnchantment;
+import fr.mawathilde.minecraftsuggestions.common.enchantment.FrostAspectEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.ObjectHolder;

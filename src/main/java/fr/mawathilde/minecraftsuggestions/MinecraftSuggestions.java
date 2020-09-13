@@ -1,11 +1,10 @@
 package fr.mawathilde.minecraftsuggestions;
 
-import fr.mawathilde.minecraftsuggestions.listener.PlayerListener;
-import fr.mawathilde.minecraftsuggestions.util.handler.RegistryHandler;
-import net.minecraftforge.common.MinecraftForge;
+import fr.mawathilde.minecraftsuggestions.common.entity.AngryZombieEntity;
+import fr.mawathilde.minecraftsuggestions.init.EntityInit;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -20,18 +19,11 @@ public class MinecraftSuggestions {
 
     public MinecraftSuggestions() {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        eventBus.register(new RegistryHandler());
-        MinecraftForge.EVENT_BUS.register(new PlayerListener());
-        eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::commonSetup);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
-    }
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-
+        GlobalEntityTypeAttributes.put(EntityInit.ANGRY_ZOMBIE, AngryZombieEntity.setCustomAttributes().create());
     }
 
 }

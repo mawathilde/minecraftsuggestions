@@ -1,3 +1,7 @@
+1.16.3-0.6.0
+- Optimize events listeners
+- Angry zombie
+
 1.16.3-0.5.0:
 - Remove toml dependencies
 - Sweet berries pie

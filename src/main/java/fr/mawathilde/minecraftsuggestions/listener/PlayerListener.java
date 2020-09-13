@@ -1,5 +1,6 @@
 package fr.mawathilde.minecraftsuggestions.listener;
 
+import fr.mawathilde.minecraftsuggestions.MinecraftSuggestions;
 import net.minecraft.block.Blocks;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
@@ -10,11 +11,11 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = MinecraftSuggestions.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class PlayerListener {
 
     @SubscribeEvent
-    public void onPlayerBoneMeal(BonemealEvent event) {
+    public static void onPlayerBoneMeal(BonemealEvent event) {
         if (event.getBlock().getBlock() == Blocks.DIRT) {
             final Random random = new Random();
             final BlockPos pos = event.getPos();
