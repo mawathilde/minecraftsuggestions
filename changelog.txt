@@ -1,3 +1,7 @@
+1.16.3-0.6.2
+- Update loaderVersion
+- build.gradle sourceSets
+
 1.16.3-0.6.1
 - Create pt_br.json lang (Portuguese)
 - Nerf angry zombie speed
