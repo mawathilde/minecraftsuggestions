@@ -27,11 +27,6 @@ public class AngryZombieEntity extends ZombieEntity {
         this(EntityInit.ANGRY_ZOMBIE, worldIn);
     }
 
-    @Override
-    public ItemStack getPickedResult(RayTraceResult target) {
-        return new ItemStack(ItemInit.ANGRY_ZOMBIE_SPAWN_EGG);
-    }
-
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MonsterEntity.func_234295_eP_()
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 35.0D)
@@ -39,6 +34,11 @@ public class AngryZombieEntity extends ZombieEntity {
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D)
                 .createMutableAttribute(Attributes.ARMOR, 2.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS);
+    }
+
+    @Override
+    public ItemStack getPickedResult(RayTraceResult target) {
+        return new ItemStack(ItemInit.ANGRY_ZOMBIE_SPAWN_EGG);
     }
 
 }

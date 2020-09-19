@@ -18,7 +18,7 @@ public class EntityListener {
 
     @SubscribeEvent
     public static void onEntitySpawning(LivingSpawnEvent.SpecialSpawn event) {
-        if(event.getEntityLiving().getClass() == ZombieEntity.class && event.getSpawnReason() != SpawnReason.SPAWN_EGG) {
+        if (event.getEntityLiving().getClass() == ZombieEntity.class && event.getSpawnReason() != SpawnReason.SPAWN_EGG) {
             boolean spawn = false;
             switch (event.getWorld().getDifficulty()) {
                 case PEACEFUL:
@@ -33,7 +33,7 @@ public class EntityListener {
                     spawn = RANDOM.nextFloat() >= 0.33F;
                     break;
             }
-            if(spawn) {
+            if (spawn) {
                 final ZombieEntity zombieEntity = (ZombieEntity) event.getEntityLiving();
                 zombieEntity.remove();
                 event.setCanceled(true);
