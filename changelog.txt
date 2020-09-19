@@ -1,3 +1,6 @@
+1.16.3-0.7.0
+- French translation
+
 1.16.3-0.6.2
 - Update loaderVersion
 - build.gradle sourceSets
