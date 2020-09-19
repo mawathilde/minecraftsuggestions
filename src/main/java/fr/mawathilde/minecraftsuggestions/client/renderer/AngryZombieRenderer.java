@@ -12,7 +12,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class AngryZombieRenderer extends AbstractZombieRenderer<ZombieEntity, ZombieModel<ZombieEntity>> {
 
-    private static final ResourceLocation ANGRY_ZOMBIE_TEXTURE = new ResourceLocation(MinecraftSuggestions.MOD_ID, "textures/entity/zombie/angry_zombie.png");
+    protected static final ResourceLocation ANGRY_ZOMBIE_TEXTURE = new ResourceLocation(MinecraftSuggestions.MOD_ID, "textures/entity/zombie/angry_zombie.png");
 
     public AngryZombieRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new ZombieModel<>(0.0F, false), new ZombieModel<>(0.5F, true), new ZombieModel<>(1.0F, true));
