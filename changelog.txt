@@ -1,3 +1,6 @@
+1.16.3-0.7.1
+- Optimize code
+
 1.16.3-0.7.0
 - French translation
 
