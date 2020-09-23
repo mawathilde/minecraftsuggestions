@@ -26,13 +26,13 @@ public class EntityListener {
                     case PEACEFUL:
                         break;
                     case EASY:
-                        spawn = RANDOM.nextFloat() >= 0.88F;
+                        spawn = RANDOM.nextFloat() <= MSServerConfig.MOBS.angryZombieSpawnRate.easyRate.get();
                         break;
                     case NORMAL:
-                        spawn = RANDOM.nextFloat() >= 0.51F;
+                        spawn = RANDOM.nextFloat() >= MSServerConfig.MOBS.angryZombieSpawnRate.normalRate.get();
                         break;
                     case HARD:
-                        spawn = RANDOM.nextFloat() >= 0.33F;
+                        spawn = RANDOM.nextFloat() >= MSServerConfig.MOBS.angryZombieSpawnRate.hardRate.get();
                         break;
                     default:
                         spawn = false;

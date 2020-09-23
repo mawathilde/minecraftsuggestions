@@ -24,7 +24,6 @@ public class PlayerListener {
                 final BlockPos pos = event.getPos();
                 event.getWorld().setBlockState(pos, Blocks.GRASS_BLOCK.getDefaultState());
                 if (event.getWorld().isRemote && MSClientConfig.RENDERS.enableVillagerParticles.get()) {
-                    System.out.println("WOW");
                     for (int i = 0; i < 8; i++) {
                         final float x = random.nextFloat() - 0.5f;
                         final float z = random.nextFloat() - 0.5f;
