@@ -7,10 +7,10 @@ modId = "minecraftsuggestions" #mandatory
 version = "${file.jarVersion}" #mandatory
 displayName = "Minecraft Suggestions" #mandatory
 #updateJSONURL="http://myurl.me/" #optional
-#displayURL="http://example.com/" #optional
-#logoFile="examplemod.png" #optional
+displayURL="https://curseforge.com/minecraft/mc-mods/mc-suggestions"
+logoFile="logo.png"
 #credits="Thanks for this example mod goes to Java" #optional
-authors = "Mawathilde" #optional
+authors = "Mawathilde"
 description = '''
 
 '''
