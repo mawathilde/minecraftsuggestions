@@ -14,3 +14,22 @@ authors = "Mawathilde" #optional
 description = '''
 
 '''
+
+[[dependencies.minecraftsuggestions]]
+modId = "forge"
+mandatory = true
+versionRange = "[34,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.minecraftsuggestions]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.16.3]"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.minecraftsuggestions]]
+modId = "cloth-config"
+mandatory = true
+versionRange = "[4.0,)"
+ordering = "BEFORE"
+side = "CLIENT"

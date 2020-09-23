@@ -1,6 +1,7 @@
 package fr.mawathilde.minecraftsuggestions.listener;
 
 import fr.mawathilde.minecraftsuggestions.MinecraftSuggestions;
+import fr.mawathilde.minecraftsuggestions.common.config.MSServerConfig;
 import fr.mawathilde.minecraftsuggestions.common.entity.AngryZombieEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.monster.ZombieEntity;
@@ -18,27 +19,31 @@ public class EntityListener {
 
     @SubscribeEvent
     public static void onEntitySpawning(LivingSpawnEvent.SpecialSpawn event) {
-        if (event.getEntityLiving().getClass() == ZombieEntity.class && event.getSpawnReason() != SpawnReason.SPAWN_EGG) {
-            boolean spawn = false;
-            switch (event.getWorld().getDifficulty()) {
-                case PEACEFUL:
-                    break;
-                case EASY:
-                    spawn = RANDOM.nextFloat() >= 0.88F;
-                    break;
-                case NORMAL:
-                    spawn = RANDOM.nextFloat() >= 0.51F;
-                    break;
-                case HARD:
-                    spawn = RANDOM.nextFloat() >= 0.33F;
-                    break;
-            }
-            if (spawn) {
-                final ZombieEntity zombieEntity = (ZombieEntity) event.getEntityLiving();
-                zombieEntity.remove();
-                event.setCanceled(true);
-                event.setResult(Event.Result.DENY);
-                event.getWorld().addEntity(new AngryZombieEntity(zombieEntity));
+        if (MSServerConfig.FEATURES.enableAngryZombieSpawn.get()) {
+            if (event.getEntityLiving().getClass() == ZombieEntity.class && event.getSpawnReason() != SpawnReason.SPAWN_EGG) {
+                boolean spawn = false;
+                switch (event.getWorld().getDifficulty()) {
+                    case PEACEFUL:
+                        break;
+                    case EASY:
+                        spawn = RANDOM.nextFloat() >= 0.88F;
+                        break;
+                    case NORMAL:
+                        spawn = RANDOM.nextFloat() >= 0.51F;
+                        break;
+                    case HARD:
+                        spawn = RANDOM.nextFloat() >= 0.33F;
+                        break;
+                    default:
+                        spawn = false;
+                }
+                if (spawn) {
+                    final ZombieEntity zombieEntity = (ZombieEntity) event.getEntityLiving();
+                    zombieEntity.remove();
+                    event.setCanceled(true);
+                    event.setResult(Event.Result.DENY);
+                    event.getWorld().addEntity(new AngryZombieEntity(zombieEntity));
+                }
             }
         }
     }

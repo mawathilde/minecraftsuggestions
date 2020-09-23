@@ -77,8 +77,17 @@ minecraft {
     }
 }
 
+repositories {
+    maven { url "https://files.minecraftforge.net/maven" }
+    jcenter()
+    maven { url "https://minecraft.curseforge.com/api/maven/" }
+    maven { url "https://www.cursemaven.com" }
+}
+
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+    runtimeOnly fg.deobf("curse.maven:cloth-config-forge:${cloth_config_version}")
+    compileOnly fg.deobf("curse.maven:cloth-config-forge:${cloth_config_version}")
 }
 
 jar {
@@ -155,6 +164,9 @@ curseforge {
         addGameVersion project.mc_version
         mainArtifact(jar) {
             displayName = "${mod_name}-${version}"
+        }
+        relations {
+            requiredDependency 'cloth-config-forge'
         }
     }
 }

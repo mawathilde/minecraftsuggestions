@@ -1,3 +1,7 @@
+1.16.3-1.0.0-beta1
+- Add config (server & client)
+- cloth_config api
+
 1.16.3-0.7.1
 - Optimize code
 
