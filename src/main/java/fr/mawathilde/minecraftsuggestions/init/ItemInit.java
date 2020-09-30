@@ -16,6 +16,7 @@ public final class ItemInit {
 
     public static void register(IForgeRegistry<Item> registry) {
         registry.register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(FoodConstants.SWEET_BERRIES_PIE)).setRegistryName("sweet_berries_pie"));
+        registry.register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(FoodConstants.GOLDEN_BEETROOT)).setRegistryName("golden_beetroot"));
         registry.register(new CustomSpawnEggItem(() -> EntityInit.ANGRY_ZOMBIE, 44975, 16711680, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("angry_zombie_spawn_egg"));
     }
 
