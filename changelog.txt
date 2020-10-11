@@ -1,3 +1,7 @@
+1.16.3-1.1.0
+- Update forge version to 34.1.0
+- Golden beetroot
+
 1.16.3-1.0.0
 - Add configuration system (server & client)
 - Add library cloth_config
