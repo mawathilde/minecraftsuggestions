@@ -14,7 +14,7 @@ public final class EntityInit {
     public static EntityType<AngryZombieEntity> ANGRY_ZOMBIE;
 
     public static void register(IForgeRegistry<EntityType<?>> registry) {
-        register(registry, "angry_zombie", EntityType.Builder.<AngryZombieEntity>create(AngryZombieEntity::new, EntityClassification.MONSTER).size(0.6F, 1.95F).func_233606_a_(8));
+        register(registry, "angry_zombie", EntityType.Builder.<AngryZombieEntity>create(AngryZombieEntity::new, EntityClassification.MONSTER).size(0.6F, 1.95F).trackingRange(8));
     }
 
     private static void register(IForgeRegistry<EntityType<?>> registry, String key, EntityType.Builder<?> builder) {
